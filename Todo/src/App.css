@@ -1,42 +1,151 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+textarea {
+  resize: none;
+}
+ 
+header {
+  box-shadow: 0px 3px 6px #121416;
+}
+ 
+nav {
+  max-width: 100%; /* Adjusted */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav * {
+  color: white;
+}
+nav a:hover {
+  color: #535bf2;
+}
+
+nav button{
+  font-size: 2em;
+}
+ 
+.navLoginSignup {
+  display: flex;
+}
+.navUser{
+  display: flex;
+}
+.navUser h1{
+  margin-right: 20px;
+}
+ 
+header a {
+  color: black;
+  text-decoration: none;
+}
+ 
+.loginForm {
+  flex-direction: column; /* Adjusted */
+  background-color: 242424;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 300px; /* Adjusted */
+  padding: 5% 10%;
+}
+ 
+.loginForm input {
+  border: 0px;
+  border-bottom: 1px solid;
+  font-size: 1.5rem;
+  margin: 1vh 0px;
+  width: 100%;
+  text-align: left;
+}
+ 
+.loginForm button {
+  margin-top: 1rem; /* Adjusted */
+  align-self: center; /* Adjusted */
+}
+ 
+.error {
+  text-align: center;
+  background-color: rgb(179, 1, 1);
+  border-radius: 4px;
+  color: white;
+  min-height: 20px;
+  max-width: 80%;
+  margin: 1rem auto;
+  padding: 0.3rem 0.1rem;
+}
+ 
+.post {
+  position: relative;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 1rem 10%;
+  padding: 0.2rem 1rem;
+  font-size: 3rem;
+  max-width: 100%; /* Adjusted */
+}
+
+.post p{
+  font-size: 2rem;
+}
+
+.errorBox{
+  min-height: 50px;
+  max-height: 50px;
+  box-sizing: border-box;
+}
+
+.delete{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 0.5em;
+  color: white;
+  background-color: rgb(179, 1, 1);
+}
+
+.home{
+  margin: 100px 0 0 0;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.home .title{
+  font-weight: 400;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user .title{
+  font-weight: 400;
+  text-align: center;
+}
+.user form{
+  text-align: center;
+}
+.inputField{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 70%;
+  margin: 10px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.list{
+  margin: 0 auto;
+  max-height: 500px;
+  max-width: 60%;
+  overflow: scroll;
 }
 
-.card {
-  padding: 2em;
+.item{
+  box-sizing: border-box;
+  margin: 10px auto;
+  border-radius: 4px;
+  background-color: black;
+  padding: 10px;
 }
 
-.read-the-docs {
-  color: #888;
-}
+ 
+/* Media Queries */

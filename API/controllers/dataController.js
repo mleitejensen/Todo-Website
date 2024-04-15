@@ -2,9 +2,10 @@ const Data = require("../models/dataModel")
 const User = require("../models/userModel")
 
 const getList = async (req, res) => {
-    const {username} = req.body
+    const user = req.user
     try{
-        const find = await Data.find({username})
+        const findUser = await User.findOne({_id: user._id})
+        const find = await Data.find({username: findUser.username})
         res.status(200).json(find)
     }catch(error){
         res.status(400).json({ error: error.message })
