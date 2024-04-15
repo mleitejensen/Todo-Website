@@ -26,7 +26,13 @@ const createPost = async (req, res) => {
 
 const deletePost = async (req, res) => {
     const {_id} = req.body
+    const user = req.user
     try{
+        const findUser = await User.findOne({_id: user._id})
+        const findPost = await Data.findOne({_id})
+        if(findPost.username !== findUser.username){
+            throw Error("you are not authorized to do this")
+        }
         const removePost = await Data.deleteOne({_id})
         res.status(200).json(removePost)
     }catch(error){

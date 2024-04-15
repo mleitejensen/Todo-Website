@@ -33,6 +33,10 @@ const User = () => {
         getList()
     },[data])
 
+    const deletePost = (_id) => {
+        console.log(_id)
+    }
+
     return(
         <div className="user">
             <h1 className="title">The shit i am going to do today</h1>
@@ -41,6 +45,7 @@ const User = () => {
             {list && list.map((item) => (
                 <div className="item" key={item?._id}>
                     <p>{item?.body}</p>
+                    <button onClick={() => deletePost(item?._id)}>Delete</button>
                 </div>
             ))}
             </div>
